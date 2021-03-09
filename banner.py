@@ -35,3 +35,9 @@ class banner:
             return self.count - self.characters[char][-1]
         except IndexError:
             return 0
+
+    def table(self):
+        print(f"{'Name':15}| # of RUs | # of banner since last RU")
+        for char in self.characters:
+            print('-' * 55)
+            print(f"{char:15}|{self.total(char): ^10}|{self.last(char):>5}")
