@@ -13,6 +13,9 @@ class banner:
             output += f"{char}: {self.characters[char]}\n"
         return output
 
+    def getChars(self):
+        return [char for char in self.characters]
+
     def update(self, chars):
         self.count += 1
         for char in chars:
@@ -23,3 +26,12 @@ class banner:
             output = {'count': self.count}
             output.update({'characters': self.characters})
             json.dump(output, file, indent=2)
+
+    def total(self, char):
+        return len(self.characters[char])
+
+    def last(self, char):
+        try:
+            return self.characters[char][-1] - self.characters[char][-2]
+        except IndexError:
+            return 0
