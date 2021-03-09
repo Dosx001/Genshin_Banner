@@ -37,7 +37,24 @@ class banner:
             return 0
 
     def table(self):
-        print(f"{'Name':15}| # of RUs | # of banner since last RU")
-        for char in self.characters:
-            print('-' * 55)
-            print(f"{char:15}|{self.total(char): ^10}|{self.last(char):>5}")
+        output = f"{'Name':15}| # of RUs | # of banners since last RU\n"
+        stack = []
+        for char in sorted(self.characters, key=lambda x:(self.last(x), self.total(x)), reverse=True):
+            if len(stack) == 0:
+                stack.append(char)
+            elif self.last(char) == self.last(stack[0]):
+                stack.append(char)
+            else:
+                output += self.unstack(stack)
+                stack.append(char)
+        output += self.unstack(stack)
+        print(output)
+
+    def unstack(self, stack):
+        output = ""
+        while len(stack) != 0:
+            char = stack.pop()
+            output += '-' * 55 + '\n'
+            output += f"{char:15}|{self.total(char): ^10}|{self.last(char):>5}\n"
+        return output
+
