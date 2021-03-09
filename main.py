@@ -2,10 +2,12 @@ from banner import banner
 
 def main():
     ban = banner()
-    for i in ban.characters:
-        print(i)
-        print(ban.last(i))
-        print(ban.total(i))
+    ban.table()
+    ban.update(['Razor', 'Sucrose', 'Noelle'])
+    ban.table()
+    ban.new('Rosaria')
+    ban.update(['Rosaria', 'Fischl', 'Xinyan'])
+    ban.table()
 
 if __name__ == "__main__":
     main()

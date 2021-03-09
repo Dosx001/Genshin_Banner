@@ -21,6 +21,10 @@ class banner:
         for char in chars:
             self.characters[char].append(self.count)
 
+    def new(self, char):
+        self.characters.update({char: []})
+        self.characters = dict(sorted(self.characters.items()))
+
     def save(self):
         with open('banner.json', 'w') as file:
             output = {'count': self.count}
