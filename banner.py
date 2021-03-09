@@ -32,6 +32,6 @@ class banner:
 
     def last(self, char):
         try:
-            return self.characters[char][-1] - self.characters[char][-2]
+            return self.count - self.characters[char][-1]
         except IndexError:
             return 0
