@@ -1,18 +1,58 @@
 {
-  "count": 0,
+  "count": 9,
   "characters": {
-    "Brbara": [],
-    "Beidou": [],
-    "Bennett": [],
-    "Chongyun": [],
-    "Diona": [],
-    "Fischl": [],
-    "Ningguang": [],
-    "Noelle": [],
-    "Razor": [],
-    "Sucrose": [],
-    "Xiangling": [],
-    "Xingqiu": [],
-    "Xinyan": []
+    "Barbara": [
+      1,
+      8
+    ],
+    "Beidou": [
+      7
+    ],
+    "Bennett": [
+      3,
+      5,
+      8
+    ],
+    "Chongyun": [
+      4,
+      9
+    ],
+    "Diona": [
+      3,
+      7
+    ],
+    "Fischl": [
+      1,
+      5
+    ],
+    "Ningguang": [
+      3,
+      8
+    ],
+    "Noelle": [
+      2,
+      6
+    ],
+    "Razor": [
+      4
+    ],
+    "Sucrose": [
+      2,
+      5
+    ],
+    "Xiangling": [
+      1,
+      6,
+      9
+    ],
+    "Xingqiu": [
+      2,
+      6,
+      9
+    ],
+    "Xinyan": [
+      4,
+      7
+    ]
   }
 }
