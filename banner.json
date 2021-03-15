@@ -1,5 +1,5 @@
 {
-  "count": 9,
+  "count": 10,
   "characters": {
     "Barbara": [
       1,
@@ -31,14 +31,17 @@
     ],
     "Noelle": [
       2,
-      6
+      6,
+      10
     ],
     "Razor": [
-      4
+      4,
+      10
     ],
     "Sucrose": [
       2,
-      5
+      5,
+      10
     ],
     "Xiangling": [
       1,
