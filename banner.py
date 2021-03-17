@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+import numpy as np
 import json
 
 class banner:
@@ -15,6 +17,9 @@ class banner:
 
     def getChars(self):
         return [char for char in self.characters]
+
+    def size(self):
+        return len(self.characters)
 
     def update(self, chars):
         self.count += 1
@@ -62,3 +67,19 @@ class banner:
             output += f"{char:15}|{self.total(char): ^10}|{self.last(char):>5}\n"
         return output
 
+    def chart(self):
+        z = np.zeros((self.size(), self.count))
+        for count, char in enumerate(self.characters):
+            for i in self.characters[char]:
+                z[count][i - 1] = count + 5
+
+        x = np.arange(.5, self.count + 1, 1)
+        y = np.arange(-.5, self.size(), 1)
+
+        fig, ax = plt.subplots()
+        ax.pcolormesh(x, y, z)
+        plt.yticks([i for i in range(self.size())], self.getChars())
+        ax.set_xticks(np.arange(.5, self.count + 1), minor=True)
+        ax.set_yticks(np.arange(.5, self.size()), minor=True)
+        plt.grid(which='minor')
+        plt.show()
