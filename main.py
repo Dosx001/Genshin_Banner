@@ -4,8 +4,7 @@ def main():
     ban = banner()
     ban.table()
     ban.chart()
-    ban.new('Rosaria')
-    ban.update(['Rosaria', 'Fischl', 'Barbara'])
+    ban.update(['Ningguang', 'Bennett', 'Razor'])
     ban.table()
 
 if __name__ == "__main__":
