@@ -3,10 +3,10 @@ from banner import banner
 def main():
     ban = banner()
     ban.table()
-    ban.update(['Xiangling', 'Xingqiu', 'Noelle'])
+    ban.chart()
+    ban.update(['Noelle', 'Beidou', 'Xingqiu'])
     ban.table()
     #ban.save()
-    ban.chart()
 
 if __name__ == "__main__":
     main()
