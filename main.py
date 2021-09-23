@@ -3,8 +3,9 @@ from banner import banner
 def main():
     ban = banner()
     ban.table()
-    ban.chart()
-    ban.update(['Noelle', 'Beidou', 'Xingqiu'])
+    #ban.chart()
+    ban.new('Thoma')
+    ban.update(['Noelle', 'Thoma', 'Barbara'])
     ban.table()
     #ban.save()
 
