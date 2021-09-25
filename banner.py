@@ -40,10 +40,7 @@ class banner:
         return len(self.characters[char])
 
     def last(self, char):
-        try:
-            return self.count - self.characters[char][-1]
-        except IndexError:
-            return 0
+        return self.count - self.characters[char][-1]
 
     def table(self):
         output = f"{'Name':15}| # of RUs | # of banners since last RU\n"
@@ -73,13 +70,17 @@ class banner:
             for i in self.characters[char]:
                 z[count][i - 1] = count + 5
 
-        x = np.arange(.5, self.count + 1, 1)
-        y = np.arange(-.5, self.size(), 1)
+        x = np.arange(.5, self.count + 1)
+        y = np.arange(-.5, self.size())
 
         fig, ax = plt.subplots()
         ax.pcolormesh(x, y, z)
         plt.yticks([i for i in range(self.size())], self.getChars())
-        ax.set_xticks(np.arange(.5, self.count + 1), minor=True)
-        ax.set_yticks(np.arange(.5, self.size()), minor=True)
+        plt.xticks(np.arange(1, self.count + 1, 2))
+        ax.set_xticks(x, minor=True)
+        ax.set_yticks(y, minor=True)
         plt.grid(which='minor')
+        plt.draw()
+
+    def show(self):
         plt.show()
