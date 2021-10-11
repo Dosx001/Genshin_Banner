@@ -5,7 +5,7 @@ def main():
     ban.table()
     ban.chart()
     ban.new('Thoma')
-    ban.update(['Noelle', 'Thoma', 'Barbara'])
+    ban.update(['Thoma', 'Noelle', 'Barbara'])
     ban.table()
     ban.show()
     #ban.save()
